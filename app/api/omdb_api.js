@@ -1,8 +1,8 @@
 import axios from 'axios';
 
-module.exports = (search) => {
+module.exports = (movie) => {
 	let api_key = 'ef74689a'
-	let api_url = `http://omdbapi.com/?apikey=${api_key}&t=${search}`
+	let api_url = `http://omdbapi.com/?apikey=${api_key}&s=${movie}`
 	return axios.get(api_url, {
 		headers: {
 			'content-type': 'application/json',
